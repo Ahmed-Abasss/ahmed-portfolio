@@ -1,0 +1,39 @@
+<section id="projects" class="section">
+  <div class="container">
+    <app-section-header
+      title="Featured Projects"
+      description="More projects are on GitHub — this is a starting selection."
+    ></app-section-header>
+
+    <div class="projects">
+      @for (project of projects; track project.id) {
+        <article class="project">
+          <div class="project__main">
+            <h3 class="project__name">{{ project.name }}</h3>
+            <p class="project__summary">{{ project.summary }}</p>
+
+            <div class="project__tags">
+              @for (tag of project.techTags; track tag) {
+                <span class="tag">{{ tag }}</span>
+              }
+            </div>
+          </div>
+
+          <details class="project__details">
+            <summary>Architecture</summary>
+            <ul class="project__layers">
+              @for (layer of project.layers; track layer) {
+                <li>{{ layer }}</li>
+              }
+            </ul>
+          </details>
+
+          <a [href]="project.githubUrl" target="_blank" rel="noopener" class="btn project__link">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+            View on GitHub
+          </a>
+        </article>
+      }
+    </div>
+  </div>
+</section>

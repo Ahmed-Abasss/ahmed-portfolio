@@ -1,0 +1,38 @@
+<section id="home" class="hero">
+  <div class="hero__panel" aria-hidden="true"></div>
+
+  <div class="container hero__inner">
+    <div class="hero__content">
+      <h1 class="hero__name">Ahmed Abbas Nayel</h1>
+      <p class="hero__title">Full Stack .NET Developer — ASP.NET Core &amp; Angular</p>
+      <p class="hero__subtitle">Junior software engineer, open to full-time and freelance work</p>
+
+      <p class="hero__intro">
+        I build web applications end to end — ASP.NET Core and EF Core on the back end, Angular on the
+        front end — with hands-on project experience in CRM and ERP-style systems.
+      </p>
+
+      <div class="hero__actions">
+        <a href="#projects" class="btn btn--primary">View Projects</a>
+        <a href="#contact" class="btn">Get in Touch</a>
+      </div>
+
+      <div class="hero__social">
+        <a [href]="contact.githubUrl" target="_blank" rel="noopener" class="icon-link" aria-label="GitHub profile">
+          <i class="fa-brands fa-github" aria-hidden="true"></i>
+        </a>
+        <a [href]="contact.linkedinUrl" target="_blank" rel="noopener" class="icon-link" aria-label="LinkedIn profile">
+          <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+        </a>
+        <a [href]="'mailto:' + contact.email" class="icon-link" aria-label="Send an email">
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <a href="#about" class="hero__scroll">
+    <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+    Scroll
+  </a>
+</section>

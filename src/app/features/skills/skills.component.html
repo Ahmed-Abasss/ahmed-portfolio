@@ -1,0 +1,18 @@
+<section id="skills" class="section section--alt">
+  <div class="container">
+    <app-section-header title="Skills"></app-section-header>
+
+    <div class="skills-grid">
+      @for (group of groups; track group.category) {
+        <div class="skills-group">
+          <h3 class="skills-group__title">{{ group.category }}</h3>
+          <div class="skills-group__items">
+            @for (item of group.items; track item) {
+              <span class="tag">{{ item }}</span>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,114 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background var(--transition), border-color var(--transition);
+}
+
+.nav--scrolled {
+  background: var(--bg); /* fallback for browsers without color-mix() */
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: var(--space-3);
+}
+
+.nav__mark {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.nav__mark:hover {
+  color: var(--text);
+}
+
+.nav__links {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.nav__link {
+  font-size: var(--fs-small);
+  color: var(--text-muted);
+  padding-block: var(--space-1);
+  border-bottom: 1px solid transparent;
+}
+
+.nav__link:hover {
+  color: var(--text);
+}
+
+.nav__link--active {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.nav__theme-toggle,
+.nav__menu-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: color var(--transition), border-color var(--transition);
+}
+
+.nav__theme-toggle:hover,
+.nav__menu-toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.nav__menu-toggle {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .nav__menu-toggle {
+    display: inline-flex;
+  }
+
+  .nav__links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition);
+  }
+
+  .nav__links--open {
+    max-height: 24rem;
+  }
+
+  .nav__link {
+    padding: var(--space-3) var(--space-4);
+    border-bottom: 1px solid var(--border);
+  }
+}

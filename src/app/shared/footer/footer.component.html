@@ -1,0 +1,22 @@
+<footer class="footer">
+  <div class="container footer__row">
+    <div>
+      <p class="footer__name">{{ contact.name }}</p>
+      <p class="footer__title">Software Engineer | .NET & Angular</p>
+    </div>
+
+    <div class="footer__links">
+      <a [href]="contact.githubUrl" target="_blank" rel="noopener" class="icon-link" aria-label="GitHub profile">
+        <i class="fa-brands fa-github" aria-hidden="true"></i>
+      </a>
+      <a [href]="contact.linkedinUrl" target="_blank" rel="noopener" class="icon-link" aria-label="LinkedIn profile">
+        <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+      </a>
+      <a [href]="'mailto:' + contact.email" class="icon-link" aria-label="Send an email">
+        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+      </a>
+    </div>
+
+    <p class="footer__copyright">© {{ year }} {{ contact.name }}</p>
+  </div>
+</footer>

@@ -1,0 +1,33 @@
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding-block: var(--space-3);
+  border-bottom: 1px solid var(--border);
+}
+
+.contact-row:last-child {
+  border-bottom: none;
+}
+
+.contact-row__label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--text-muted);
+  font-size: var(--fs-small);
+  width: 9rem;
+}
+
+.contact-row__value {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.contact-row__copy {
+  padding: 0.35rem 0.75rem;
+  font-size: var(--fs-xs);
+}

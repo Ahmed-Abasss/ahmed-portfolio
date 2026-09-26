@@ -1,0 +1,43 @@
+<header class="nav" [class.nav--scrolled]="scrolled()">
+  <div class="container nav__row">
+    <a href="#home" class="nav__mark">Ahmed Abbas Nayel</a>
+
+    <nav class="nav__links" [class.nav__links--open]="menuOpen()">
+      @for (link of links; track link.id) {
+        <a
+          [href]="'#' + link.id"
+          class="nav__link"
+          [class.nav__link--active]="activeSection.activeId() === link.id"
+          (click)="closeMenu()"
+        >
+          {{ link.label }}
+        </a>
+      }
+    </nav>
+
+    <div class="nav__actions">
+      <button
+        type="button"
+        class="nav__theme-toggle"
+        (click)="themeService.toggle()"
+        [attr.aria-label]="themeService.theme() === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
+      >
+        @if (themeService.theme() === 'dark') {
+          <i class="fa-solid fa-sun" aria-hidden="true"></i>
+        } @else {
+          <i class="fa-solid fa-moon" aria-hidden="true"></i>
+        }
+      </button>
+
+      <button
+        type="button"
+        class="nav__menu-toggle"
+        (click)="toggleMenu()"
+        [attr.aria-expanded]="menuOpen()"
+        aria-label="Toggle navigation menu"
+      >
+        <i class="fa-solid" [class.fa-bars]="!menuOpen()" [class.fa-xmark]="menuOpen()" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+</header>

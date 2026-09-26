@@ -1,0 +1,8 @@
+.about p {
+  color: var(--text-muted);
+  margin-bottom: var(--space-3);
+}
+
+.about p:last-child {
+  margin-bottom: 0;
+}

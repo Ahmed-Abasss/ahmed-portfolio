@@ -1,0 +1,14 @@
+<section id="faq" class="section section--alt">
+  <div class="container">
+    <app-section-header title="FAQ"></app-section-header>
+
+    <div class="faq content">
+      @for (item of items; track item.question) {
+        <details class="faq__item">
+          <summary>{{ item.question }}</summary>
+          <p>{{ item.answer }}</p>
+        </details>
+      }
+    </div>
+  </div>
+</section>

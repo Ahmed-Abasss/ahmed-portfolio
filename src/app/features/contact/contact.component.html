@@ -1,0 +1,45 @@
+<section id="contact" class="section">
+  <div class="container">
+    <app-section-header
+      title="Contact"
+      description="Open to full-time and freelance opportunities — feel free to reach out directly."
+    ></app-section-header>
+
+    <div class="contact-list content">
+      <div class="contact-row">
+        <span class="contact-row__label"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email</span>
+        <div class="contact-row__value">
+          <a [href]="'mailto:' + contact.email">{{ contact.email }}</a>
+          <button type="button" class="btn contact-row__copy" (click)="copyEmail()">
+            {{ copied() ? 'Copied' : 'Copy' }}
+          </button>
+        </div>
+      </div>
+
+      <div class="contact-row">
+        <span class="contact-row__label"><i class="fa-solid fa-phone" aria-hidden="true"></i> Phone</span>
+        <a class="contact-row__value" [href]="'tel:' + contact.phone">{{ contact.phone }}</a>
+      </div>
+
+      <div class="contact-row">
+        <span class="contact-row__label"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp</span>
+        <a class="contact-row__value" [href]="contact.whatsappUrl" target="_blank" rel="noopener">Message on WhatsApp</a>
+      </div>
+
+      <div class="contact-row">
+        <span class="contact-row__label"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Location</span>
+        <span class="contact-row__value">{{ contact.location }}</span>
+      </div>
+
+      <div class="contact-row">
+        <span class="contact-row__label"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</span>
+        <a class="contact-row__value" [href]="contact.githubUrl" target="_blank" rel="noopener">{{ contact.githubUrl }}</a>
+      </div>
+
+      <div class="contact-row">
+        <span class="contact-row__label"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> LinkedIn</span>
+        <a class="contact-row__value" [href]="contact.linkedinUrl" target="_blank" rel="noopener">LinkedIn profile</a>
+      </div>
+    </div>
+  </div>
+</section>
