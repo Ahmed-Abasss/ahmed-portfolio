@@ -14,6 +14,18 @@ export const EDUCATION: TimelineItem[] = [
 ];
 
 export const COURSES: TimelineItem[] = [
+ {
+    title: 'ISTQB Foundation Level',
+    org: 'Self Study',
+    date: '12/2025 – 01/2026',
+    points: ['Test design techniques, test levels and types, test management, and defect lifecycle.'] 
+  },
+  {
+    title:'API Testing',
+    org: 'Self Study',
+    date: '02/2026 – 06/2026',
+    points: ['Testing REST APIs, validating requests/responses, status codes, and authentication.'] 
+  },
   {
     title: 'Back-End Development Diploma',
     org: 'Route Software Training Center',

@@ -4,6 +4,10 @@ export interface SkillGroup {
 }
 
 export const SKILL_GROUPS: SkillGroup[] = [
+   {
+    category: 'Testing',
+    items: ['Manual Testing', 'Api Testing'],
+  },
   {
     category: 'Backend',
     items: ['C#', 'ASP.NET Core', 'ASP.NET MVC', 'ASP.NET Web API', 'Entity Framework Core', 'LINQ'],
